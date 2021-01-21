@@ -23,7 +23,10 @@ export class ProductService {
     })
   }
   insertDatabase(product: Product) : Observable<Product>{
-  
     return this.http.post<Product>(this.url, product)
+  }
+
+  readDatabase() : Observable<Product[]> {
+    return this.http.get<Product[]>(this.url)
   }
 }

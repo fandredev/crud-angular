@@ -21,6 +21,11 @@ import { ForDirective } from './directives/for.directive';
 import { RedDirective } from './directives/red.directive';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
+import { ProductReadComponent } from './components/product-read/product-read.component';
+import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [ // Todos os componentes que fazem parte do módulo
@@ -32,7 +37,9 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
     ProductCrudComponent,
     RedDirective,
     ForDirective,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ProductReadComponent,
+    ProductRead2Component
   ],
   exports: [], // Extraia o componente pra fora do módulo
   imports: [ // Importa outros módulos da aplicação
@@ -48,7 +55,10 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
     HttpClientModule,
     MatFormFieldModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [], // Services
   bootstrap: [AppComponent] // Componente inicial da aplicação
