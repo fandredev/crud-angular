@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from './../product.model';
 import { ProductService } from './../product.service';
 @Component({
   selector: 'app-product-create',
@@ -8,11 +9,11 @@ import { ProductService } from './../product.service';
 })
 export class ProductCreateComponent implements OnInit {
 
-  product = Object.freeze({
-    name: 'Geladeira',
-    price: 1200.31
-  })
-
+  product: Product = {
+    name: '',
+    price: null
+  }
+  
   constructor(private productService: ProductService,
     private router: Router ) { }
 
@@ -20,6 +21,8 @@ export class ProductCreateComponent implements OnInit {
   
   createProduct() : void {
     this.productService.insertDatabase(this.product).subscribe(() => {
+      console.log(this.product);
+      
       this.productService.showMessage('Operação executada com sucesso!')
       this.router.navigate(['products'])
     })
