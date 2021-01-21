@@ -5,7 +5,7 @@
 import { Env } from './environment.prod';
 
 export const environment: Env = {
-  production: false
+  production: false,
 };
 
 /*
