@@ -12,12 +12,12 @@
     },
     {
       "id": 3,
-      "name": "Sansung S20+",
-      "price": 5000.89
+      "name": "Sansung S20 Plus",
+      "price": "7400.89"
     },
     {
-      "name": "Celular Sansung",
-      "price": "1900",
+      "name": "Geladeira Plus",
+      "price": "1300",
       "id": 4
     }
   ]
