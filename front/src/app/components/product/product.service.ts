@@ -1,3 +1,4 @@
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -12,7 +13,8 @@ export class ProductService {
   url = 'http://localhost:4001/products'
   constructor(
     private snackbar: MatSnackBar,
-    private http: HttpClient) 
+    private http: HttpClient
+    ) 
   { }
 
   showMessage(msg: string) : void {
@@ -28,5 +30,20 @@ export class ProductService {
 
   readDatabase() : Observable<Product[]> {
     return this.http.get<Product[]>(this.url)
+  }
+
+  readById(id: string | number) : Observable<Product> {
+    const uri = `${this.url}/${id}`
+    return this.http.get<Product>(uri)
+  }
+  
+  updatedDatabase(product: Product) : Observable<Product> {
+    const uri = `${this.url}/${product.id}`
+    return this.http.put<Product>(uri, product)
+  }
+
+  deleteById(id: string | number) : Observable<Product> {
+    const uri = `${this.url}/${id}`
+    return this.http.delete<Product>(uri)
   }
 }

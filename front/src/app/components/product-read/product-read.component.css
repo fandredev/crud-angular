@@ -1,0 +1,12 @@
+table {
+  width: 100%;
+}
+.edit {
+  margin-right: 7px;
+}
+.edit > i {
+  color:var(--iconEdit);
+}
+.delete > i{
+  color: var(--red);
+}

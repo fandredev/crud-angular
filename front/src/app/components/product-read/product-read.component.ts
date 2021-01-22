@@ -2,14 +2,18 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from './../product/product.model';
 import { ProductService } from './../product/product.service';
 
+type displayedColumns = [...string[]]
 @Component({
   selector: 'app-product-read',
   templateUrl: './product-read.component.html',
   styleUrls: ['./product-read.component.css']
 })
+
 export class ProductReadComponent implements OnInit {
 
   products: Product[]
+  product: Product
+  displayedColumns: displayedColumns = ['id','name','price', 'action']
 
   constructor(private productService: ProductService) { }
 
@@ -19,5 +23,4 @@ export class ProductReadComponent implements OnInit {
       console.log(products);
     })
   }
-
 }

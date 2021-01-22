@@ -2,7 +2,9 @@
 
 :root {
   --backgroundSideNav: #3F51B5;
-  --white: #fff
+  --white: #fff;
+  --iconEdit: #d9cd26;
+  --red: #e35e6b
 }
 
 html, body { height: 100%; }
@@ -13,4 +15,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 .v-middle {
   vertical-align: middle;
+}
+form {
+  display: flex;
+  flex-direction: column;
 }
