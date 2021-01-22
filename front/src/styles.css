@@ -4,14 +4,16 @@
   --backgroundSideNav: #3F51B5;
   --white: #fff;
   --iconEdit: #d9cd26;
-  --red: #e35e6b
+  --red: #e35e6b;
+  --green: #28a745;
+  --gray: #333
 }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .red {
-  color: rgb(227,94, 107);
+  color: var(--red);
 }
 .v-middle {
   vertical-align: middle;
@@ -19,4 +21,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 form {
   display: flex;
   flex-direction: column;
+}
+.msg-success {
+  background-color: var(--green);
+  color: var(--white)
+}
+.msg-error {
+  background-color: var(--red);
+  color: var(--white)
 }

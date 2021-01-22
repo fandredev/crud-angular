@@ -3,7 +3,8 @@
   align-items: center;
 }
 .header a {
-  text-decoration: none
+  text-decoration: none;
+  color: var(--gray);
 }
 .header .logo {
   max-height: 32px;

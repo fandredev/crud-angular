@@ -1,0 +1,13 @@
+{
+  "editor.tabSize": 2,
+  "editor.detectIndentation": true,
+  "editor.fontSize": 15,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "files.trimFinalNewlines": true,
+  "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+  },
+  "typescript.suggest.autoImports": true,
+}
