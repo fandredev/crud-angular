@@ -11,6 +11,7 @@
 
 ## Front-end :smile:
 ```sh
+  cd crud-angular
   cd front-end
   npm install && npm start
 ```
